@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './nfc.png';
+import logo from './img/nfc.png';
 import './App.css';
 import PatientInformationBox from './PatientInformationBox';
 

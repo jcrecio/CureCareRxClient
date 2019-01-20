@@ -11,13 +11,12 @@ class PatientInformationBox extends React.Component {
       patient: undefined
     };
 
-    this.getPatient = this.getPatient.bind(this);
-    this.getPatient(this.props.patientId);
+    this.getPatient(this.props.patientId)
+      .then(patient => this.setState({ patientId: this.props.patientId, patient: patient.data }));
   }
 
   getPatient(patientId) {
-    return patientDataService.getPatient(patientId)
-      .then(patient => this.setState(patient));
+    return patientDataService.getPatient(patientId);
   }
 
   render() {
